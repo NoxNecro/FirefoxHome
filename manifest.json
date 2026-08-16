@@ -5,5 +5,15 @@
   "description": "New tabs show homepage",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "8a5a538fd8452db0e8aeb940085168df5ff3e73a@newtabhomepage",
+        "data_collection_permissions": {
+            "required": [
+                "none"
+            ]
+        }
+    }
   }
 }
