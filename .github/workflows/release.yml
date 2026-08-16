@@ -1,0 +1,31 @@
+name: Release extension
+
+on:
+  push:
+    paths:
+      - manifest.json
+      - redirect.json
+      - newtab.html
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Create ZIP
+        run: |
+          zip extension.zip manifest.json redirect.json newtab.html
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: release-${{ github.run_number }}
+          name: Release ${{ github.run_number }}
+          files: extension.zip
+          generate_release_notes: true
