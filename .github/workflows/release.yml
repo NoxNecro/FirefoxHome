@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - manifest.json
-      - redirect.json
+      - redirect.js
       - newtab.html
 
 permissions:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Create ZIP
         run: |
-          zip extension.zip manifest.json redirect.json newtab.html
+          zip extension.zip manifest.json redirect.js newtab.html
 
       - name: Create release
         uses: softprops/action-gh-release@v2
