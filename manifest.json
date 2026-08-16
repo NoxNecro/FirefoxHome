@@ -3,7 +3,6 @@
   "name": "Homepage",
   "version": "1.2",
   "description": "New tabs show homepage",
-  "update_url": "https://github.com/NoxNecro/FirefoxHome/releases/latest/extension.zip",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   }
